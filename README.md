@@ -24,6 +24,7 @@
 </p>
 <p align="center">
   <a href="#project">Projeto</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#-layout">Layout</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#rocket-Tecnologias">Tecnologias</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#compilar">Compilar</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#-como-contribuir">Como contribuir</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
@@ -35,6 +36,13 @@
 ## Project
 
 Este projeto foi desenvolvido para criar uma UI em Angular componentizada.
+
+## 🔖 Layout
+
+**Web**
+
+<img src="src/assets/img/uiPerfil.JPG" width="620px" >
+<br>
 
 ## :rocket: Tecnologias
 
