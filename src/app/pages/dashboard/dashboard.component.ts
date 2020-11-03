@@ -1,22 +1,46 @@
 import { Component, OnInit } from '@angular/core';
 import Chart from 'chart.js';
-
+import {HttpClient, HttpHeaders} from '@angular/common/http';
+import {Observable} from 'rxjs';
+import {count} from 'rxjs/operators';
 
 @Component({
     selector: 'dashboard-cmp',
     moduleId: module.id,
-    templateUrl: 'dashboard.component.html'
+    templateUrl: 'dashboard.component.html',
+    styleUrls: ['./dashboard.component.css']
 })
 
 export class DashboardComponent implements OnInit{
 
-  public canvas : any;
+  url = 'http://localhost:8080/user';
+
+  // Headers
+  httpOptions = {
+    headers: new HttpHeaders({ 'Content-Type': 'application/json' })
+  }
+
+  devs = 0;
+
+  constructor(private  httpClient: HttpClient) {}
+
+  updateDevs() {
+    return this.httpClient.get(this.url)
+      .subscribe(
+        data  => this.devs = Object.keys(data).length
+      );
+  };
+
+  public canvas: any;
   public ctx;
   public chartColor;
   public chartEmail;
   public chartHours;
 
     ngOnInit(){
+
+      this.updateDevs();
+
       this.chartColor = "#FFFFFF";
 
       this.canvas = document.getElementById("chartHours");
@@ -28,20 +52,20 @@ export class DashboardComponent implements OnInit{
         data: {
           labels: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct"],
           datasets: [{
-              borderColor: "#6bd098",
-              backgroundColor: "#6bd098",
-              pointRadius: 0,
-              pointHoverRadius: 0,
-              borderWidth: 3,
-              data: [300, 310, 316, 322, 330, 326, 333, 345, 338, 354]
-            },
-            {
               borderColor: "#f17e5d",
               backgroundColor: "#f17e5d",
               pointRadius: 0,
               pointHoverRadius: 0,
               borderWidth: 3,
-              data: [320, 340, 365, 360, 370, 385, 390, 384, 408, 420]
+              data: [1500, 2000, 2100, 1800, 1900, 2100, 2400, 2300, 2300, 2500]
+            },
+            {
+              borderColor: "#6bd098",
+              backgroundColor: "#6bd098",
+              pointRadius: 0,
+              pointHoverRadius: 0,
+              borderWidth: 3,
+              data: [3000, 2700, 2600, 2400, 2500, 2800, 3000, 3100, 3200, 3500]
             },
             {
               borderColor: "#fcc468",
@@ -49,7 +73,7 @@ export class DashboardComponent implements OnInit{
               pointRadius: 0,
               pointHoverRadius: 0,
               borderWidth: 3,
-              data: [370, 394, 415, 409, 425, 445, 460, 450, 478, 484]
+              data: [2500, 2700, 2890, 3000, 2700, 3100, 3500, 3300, 3800, 4200]
             }
           ]
         },
@@ -187,9 +211,20 @@ export class DashboardComponent implements OnInit{
         pointBorderWidth: 8
       };
 
+      var dataTerc = {
+        data: [0, 1, 5, 6, 10, 20, 15, 20, 21, 42, 40, 55],
+        fill: false,
+        borderColor: '#51CACF',
+        backgroundColor: 'transparent',
+        pointBorderColor: '#DDDDDD',
+        pointRadius: 4,
+        pointHoverRadius: 4,
+        pointBorderWidth: 8
+      };
+
       var speedData = {
         labels: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
-        datasets: [dataFirst, dataSecond]
+        datasets: [dataFirst, dataSecond, dataTerc]
       };
 
       var chartOptions = {

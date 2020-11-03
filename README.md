@@ -25,7 +25,7 @@
 <p align="center">
   <a href="#project">Projeto</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#-layout">Layout</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-  <a href="#rocket-Tecnologias">Tecnologias</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="tecnologias">Tecnologias</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#compilar">Compilar</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#-como-contribuir">Como contribuir</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#memo-licensa">Licensa</a>
@@ -41,16 +41,25 @@ Este projeto foi desenvolvido para criar uma UI em Angular componentizada.
 
 **Web**
 
-<img src="src/assets/img/uiPerfil.JPG" width="620px" >
+Inicio
+<img src="src/assets/img/dashboard.gif" width="720px" >
+
+Membros da equipe
+<img src="src/assets/img/user.gif" width="720px" >
+
+Vagas
+<img src="src/assets/img/vaga.gif" width="720px" >
 <br>
 
-## :rocket: Tecnologias
+## Tecnologias
 
 Esse projeto foi desenvolvido com as seguintes tecnologias:
 
 - [Angular](https://angular.io/docs)
 - [Bootstrap](https://getbootstrap.com/docs/3.3/) 
 - [Ng Bootstrap](https://ng-bootstrap.github.io/#/home)
+- [H2 Database Engine](https://www.h2database.com/html/main.html)
+- [Projeto CRUD_Quarkus](https://gitlab.com/igorgabrielg/scraping_3p)
 
 ## Compilar
 

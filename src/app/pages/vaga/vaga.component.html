@@ -1,0 +1,155 @@
+<div class="row">
+  <div class="col-md-8">
+    <div class="card card-user">
+      <div class="card-header">
+        <h5 class="card-title">Cadastrar Membros da equipe</h5>
+      </div>
+      <div class="card-body">
+        <form>
+          <div class="row">
+            <div class="col-md-5 pr-1">
+              <div class="form-group">
+                <label>Empresa (disabled)</label>
+                <input type="text" class="form-control" disabled="" placeholder="Company" value="Mindify" #empresa>
+              </div>
+            </div>
+            <div class="col-md-4 px-1">
+              <div class="form-group">
+                <label>Vaga</label>
+                <input type="text" class="form-control" placeholder="Ex: Fullstack" value="" #vaga>
+              </div>
+            </div>
+            <div class="col-md-3 pr-1">
+              <div class="form-group">
+                <label>Salário:</label>
+                <input type="text" class="form-control" placeholder="4500,00" value="" #salario>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-12">
+              <div class="form-group">
+                <label>Tecnologias</label>
+                <input type="text" class="form-control" placeholder="Ex: React.js, React Native e Node.js" value="" #tecnologias>
+              </div>
+            </div>
+            <div class="col-md-12">
+              <div class="form-group">
+                <label>Link</label>
+                <input type="text" class="form-control" placeholder="Ex: https://jobs.kenoby.com/stefanini" value="" #link>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="update ml-auto mr-auto">
+              <button type="submit" (click)="create(empresa.value, vaga.value, salario.value, tecnologias.value, link.value)" class="btn btn-primary btn-round">Cadastrar</button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-4">
+    <div class="card">
+      <div class="card-header">
+        <h4 class="card-title">Empresas</h4>
+      </div>
+      <div class="card-body">
+        <div class="table-responsive">
+          <table class="table">
+            <thead class=" text-primary">
+            <th>
+              Empresa
+            </th>
+            <th>
+              Sede
+            </th>
+            </thead>
+            <tbody>
+            <tr>
+              <td>
+                Mindify
+              </td>
+              <td>
+                Goiânia
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Mindify
+              </td>
+              <td>
+                Goiânia/GO
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Stefanini
+              </td>
+              <td>
+                Jaguariúna/SP
+              </td>
+            </tr><tr>
+              <td>
+                Cisco Systems
+              </td>
+              <td>
+                San José/ Califórnia
+              </td>
+            </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-12">
+    <div class="card">
+      <div class="card-header">
+        <h4 class="card-title">Encontre uma vaga</h4>
+      </div>
+      <div class="card-body">
+        <div class="table-responsive">
+          <table class="table">
+            <thead class=" text-primary">
+              <th>
+                Empresa
+              </th>
+              <th>
+                Vaga para
+              </th>
+              <th>
+                Requisitos
+              </th>
+              <th class="text-right">
+                Salario
+              </th>
+              <th class="text-right">
+                Link
+              </th>
+            </thead>
+            <tbody>
+              <tr *ngFor="let vaga of vagaList">
+                <td>
+                  {{ vaga.empresa }}
+                </td>
+                <td>
+                  {{ vaga.vaga }}
+                </td>
+                <td>
+                  {{ vaga.tecnologias }}
+                </td>
+                <td class="text-right">
+                  {{ vaga.salario }}
+                </td>
+                <td class="text-right">
+                  <a href="{{ vaga.link }}">Saber mais</a>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
