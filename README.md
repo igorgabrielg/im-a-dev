@@ -25,7 +25,7 @@
 <p align="center">
   <a href="#project">Projeto</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#-layout">Layout</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-  <a href="tecnologias">Tecnologias</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#tecnologias">Tecnologias</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#compilar">Compilar</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#-como-contribuir">Como contribuir</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#memo-licensa">Licensa</a>
@@ -42,12 +42,15 @@ Este projeto foi desenvolvido para criar uma UI em Angular componentizada.
 **Web**
 
 Inicio
+<br>
 <img src="src/assets/img/dashboard.gif" width="720px" >
 
 Membros da equipe
+<br>
 <img src="src/assets/img/user.gif" width="720px" >
 
 Vagas
+<br>
 <img src="src/assets/img/vaga.gif" width="720px" >
 <br>
 
